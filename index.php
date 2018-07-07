@@ -36,8 +36,8 @@ $data = json_decode($jsonString, true);
                 <tr>
                     <td><?php echo $phone_book['firstName']; ?></td>
                     <td><?php echo $phone_book['lastName']; ?></td>
-                    <?php foreach ($phone_book['address'] as $address => $val) echo "<td>$val </td>" ?>
-                    <?php foreach ($phone_book['phoneNumber'] as $phoneNumber => $val_num) echo "<td>$val_num </td>" ?>
+                    <?php foreach ($phone_book['address'] as $val) echo "<td>$val </td>" ?>
+                    <?php foreach ($phone_book['phoneNumber'] as $val_num) echo "<td>$val_num </td>" ?>
                 </tr>
             <?php endforeach; ?>
             </tbody>
