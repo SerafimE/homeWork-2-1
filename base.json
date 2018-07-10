@@ -5,9 +5,7 @@
     "address": {
       "zip": 100001,
       "city": "Первый",
-      "street": "Первая",
-      "home": "1",
-      "apartment": "1"
+      "street": "Первая"
     },
     "phoneNumber": [
       "8 (111) 111-11-11",
@@ -19,25 +17,18 @@
     "lastName": "Алексеев",
     "address": {
       "zip": 200002,
-      "city": "Второй",
-      "street": "Вторая",
-      "home": "2",
-      "apartment": "2"
+      "city": "Второй"
     },
     "phoneNumber": [
-      "8 (222) 222-22-22",
-      "8 (333) 222-22-22"
+      "8 (222) 222-22-22"
     ]
   },
   {
-    "firstName": "Илона",
     "lastName": "Илонова",
     "address": {
       "zip": 300003,
       "city": "Третий",
-      "street": "Третья",
-      "home": "3",
-      "apartment": "3"
+      "street": "Третья"
     },
     "phoneNumber": [
       "8 (333) 333-33-33",
@@ -48,11 +39,8 @@
     "firstName": "Татьяна",
     "lastName": "Татьянова",
     "address": {
-      "zip": 400004,
       "city": "Четвёртый",
-      "street": "Четвёртая",
-      "home": "4",
-      "apartment": "4"
+      "street": "Четвёртая"
     },
     "phoneNumber": [
       "8 (444) 444-44-44",
@@ -64,10 +52,7 @@
     "lastName": "Николаев",
     "address": {
       "zip": 500005,
-      "city": "Пятый",
-      "street": "Пятая",
-      "home": "5",
-      "apartment": "5"
+      "city": "Пятый"
     },
     "phoneNumber": [
       "8 (555) 555-55-55",
