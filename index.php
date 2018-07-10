@@ -13,37 +13,37 @@ $data = json_decode($jsonString, true);
 
 <body>
 
-<div>
-    <h1>Телефонная книга</h1>
-    <div>
-        <table>
-            <caption></caption>
-            <thead>
-            <tr>
-                <th>Имя</th>
-                <th>Фамилия</th>
-                <th>Индекс</th>
-                <th>Город</th>
-                <th>Улица</th>
-                <th>Дом</th>
-                <th>Квартира</th>
-                <th>Телефон мобильный</th>
-                <th>Телефон "другой"</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php foreach ($data as $phone_book): ?>
-                <tr>
-                    <td><?php echo $phone_book['firstName']; ?></td>
-                    <td><?php echo $phone_book['lastName']; ?></td>
-                    <?php foreach ($phone_book['address'] as $val) echo "<td>$val </td>" ?>
-                    <?php foreach ($phone_book['phoneNumber'] as $val_num) echo "<td>$val_num </td>" ?>
-                </tr>
-            <?php endforeach; ?>
-            </tbody>
-        </table>
-    </div>
-</div>
+<table>
+    <caption><h1>Телефонная книга</h1></caption>
+    <thead>
+    <tr>
+        <th rowspan="2">Имя</th>
+        <th rowspan="2">Фамилия</th>
+        <th colspan="3">Адрес:</th>
+        <th colspan="2">Телефоны:</th>
+    </tr>
+    <tr>
+        <th>Индекс</th>
+        <th>Город</th>
+        <th>Улица</th>
+        <th>Мобильный</th>
+        <th>Другой</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($data as $phoneBook) { ?>
+        <tr>
+            <td><?php echo isset($phoneBook['firstName']) ? $phoneBook['firstName'] : 'нет' ?></td>
+            <td><?php echo isset($phoneBook['lastName']) ? $phoneBook['lastName'] : 'нет' ?></td>
+            <td><?php echo isset($phoneBook['address']['zip']) ? $phoneBook['address']['zip'] : 'нет' ?> </td>
+            <td><?php echo isset($phoneBook['address']['city']) ? $phoneBook['address']['city'] : 'нет' ?> </td>
+            <td><?php echo isset($phoneBook['address']['street']) ? $phoneBook['address']['street'] : 'нет' ?> </td>
+            <td><?php echo isset($phoneBook['phoneNumber'][0]) ? $phoneBook['phoneNumber'][0] : 'нет' ?></td>
+            <td><?php echo isset($phoneBook['phoneNumber'][1]) ? $phoneBook['phoneNumber'][1] : 'нет' ?></td>
+        </tr>
+    <?php } ?>
+    </tbody>
+</table>
 
 </body>
 
