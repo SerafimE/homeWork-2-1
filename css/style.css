@@ -2,15 +2,13 @@ h1 {
     text-align: center;
 }
 
-div {
-    width: 900px;
+table {
+    width: 1000px;
     margin-left: auto;
     margin-right: auto;
-}
-
-table {
     text-align: center;
     border-collapse: collapse;
+    box-shadow: 1px 2px 3px #a4a4a4;
 }
 
 th {
